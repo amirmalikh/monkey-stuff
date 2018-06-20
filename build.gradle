@@ -6,11 +6,11 @@ repositories {
     }
 }
 
-dependencies{
+dependencies {
     compile 'org.jmonkeyengine:jme3-bullet:3.2.1-stable'
     compile 'org.jmonkeyengine:jme3-bullet-native:3.2.1-stable'
-    compile ('org.jmonkeyengine:jme3-examples:3.2.1-stable') {
-        excludes 'org.jmonkeyengine:jme3-jbullet'
-        excludes 'org.jmonkeyengine:jme3-testdata'
+    compile(group: 'org.jmonkeyengine', name: 'jme3-examples', version: '3.2.1-stable') {
+        exclude group: 'org.jmonkeyengine', module: 'jme3-testdata'
+        exclude group: 'org.jmonkeyengine', module: 'jme3-jbullet'
     }
 }
